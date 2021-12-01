@@ -17,3 +17,14 @@ func CountDepthIncreases(measurements []int) (increases int) {
 	}
 	return
 }
+
+func SlidingWindow(measurements []int, size int) (windows []int) {
+	windows = make([]int, len(measurements)-size+1)
+	for i := 0; i < len(measurements)-size+1; i++ {
+		windows[i] = measurements[i]
+		for j := 1; j < size; j++ {
+			windows[i] += measurements[i+j]
+		}
+	}
+	return
+}
