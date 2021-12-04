@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	measurements := utilities.ReadInputFile("inputs/day_1.txt")
+	measurements := utilities.ReadSonarInputFile("inputs/day_1.txt")
 	increases := sonar.CountDepthIncreases(measurements)
 	fmt.Printf("Of %d sonar measurements, %d were increases\n", len(measurements), increases)
 
